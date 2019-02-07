@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    </head>
+    <style>
+        body{
+            
+            margin: 0px;
+            padding: 0px;
+            background: #0077B5;
+        }    
+        
+        .head-wrapper p{
+            color: white;
+            text-align: center;
+            margin: 5px 0px 0px 0px;
+            box-sizing: border-box;
+        }
+        
+        .head-wrapper p img{
+            border: 2px solid white;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+        .head-wrapper h1{
+            text-align: center;
+            color: white;
+            font-family: 'Heebo', sans-serif;
+            margin-top: 5px;
+            font-weight: 100;
+        }
+        
+        .form{
+            width: 470px;
+          
+            border: none;
+            margin: 0px auto;
+            box-sizing: border-box;
+            padding: 5px;
+            background: #EEE;
+            color: gray;
+            font-family: 'EB Garamond', serif;
+
+        }
+        
+        .name-cont{
+            padding: 0px 10px;
+            margin: 10px 0px;
+        }
+        .name-cont label{
+            color: slategray;
+            font-size: 20px;
+        }
+        .name-cont input{
+            width: 440px;
+            box-sizing: border-box;
+            border: none;
+            border: 1px solid silver;
+            height: 30px;
+            font-size: 17px;
+        }
+        
+        .email{
+            padding: 0px 10px;
+            margin: 5px 0px;
+        }
+        .email label{
+            color: slategray;
+            font-size: 20px;
+        }
+        .email input{
+            width: 440px;
+            box-sizing: border-box;
+            border: none;
+            border: 1px solid silver;
+            height: 30px;
+            font-size: 17px;
+        }
+        .password{
+           padding: 0px 10px;
+           margin: 5px 0px; 
+        }
+        .password label{
+            color: slategray;
+            font-size: 20px;
+        }
+        .password input{
+            width: 440px;
+            box-sizing: border-box;
+            border: none;
+            border: 1px solid silver;
+            height: 30px;
+            font-size: 17px;
+        }
+        .agree {
+            box-sizing: border-box;
+            padding: 10px 15px;
+        }
+        .agree p{
+            margin: 0px;
+            text-align: center;
+        }
+        .login{
+            width: 400px;
+            margin: 0px auto;
+        }
+        .login button{
+            width: 400px;
+            padding: 10px 0px;
+            font-weight: 400;
+            background: -webkit-linear-gradient(top, #287bbc 0%, #23639a 100%);
+            border: none;
+            color: white;
+            border-radius: 5px;
+            transition: all 2s;
+        }
+        .login button:hover{
+            cursor: pointer;
+            background: -webkit-linear-gradient(top, #23639a  0%, #287bbc 100%);
+        }
+    </style>
+    <body>
+       <div class="main-container">
+        <div class="head-wrapper">
+            <p>
+                <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQzMC4xMTcgNDMwLjExNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDMwLjExNyA0MzAuMTE3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggaWQ9IkxpbmtlZEluIiBkPSJNNDMwLjExNywyNjEuNTQzVjQyMC41NmgtOTIuMTg4VjI3Mi4xOTNjMC0zNy4yNzEtMTMuMzM0LTYyLjcwNy00Ni43MDMtNjIuNzA3ICAgYy0yNS40NzMsMC00MC42MzIsMTcuMTQyLTQ3LjMwMSwzMy43MjRjLTIuNDMyLDUuOTI4LTMuMDU4LDE0LjE3OS0zLjA1OCwyMi40NzdWNDIwLjU2aC05Mi4yMTljMCwwLDEuMjQyLTI1MS4yODUsMC0yNzcuMzJoOTIuMjEgICB2MzkuMzA5Yy0wLjE4NywwLjI5NC0wLjQzLDAuNjExLTAuNjA2LDAuODk2aDAuNjA2di0wLjg5NmMxMi4yNTEtMTguODY5LDM0LjEzLTQ1LjgyNCw4My4xMDItNDUuODI0ICAgQzM4NC42MzMsMTM2LjcyNCw0MzAuMTE3LDE3Ni4zNjEsNDMwLjExNywyNjEuNTQzeiBNNTIuMTgzLDkuNTU4QzIwLjYzNSw5LjU1OCwwLDMwLjI1MSwwLDU3LjQ2MyAgIGMwLDI2LjYxOSwyMC4wMzgsNDcuOTQsNTAuOTU5LDQ3Ljk0aDAuNjE2YzMyLjE1OSwwLDUyLjE1OS0yMS4zMTcsNTIuMTU5LTQ3Ljk0QzEwMy4xMjgsMzAuMjUxLDgzLjczNCw5LjU1OCw1Mi4xODMsOS41NTh6ICAgIE01LjQ3Nyw0MjAuNTZoOTIuMTg0di0yNzcuMzJINS40NzdWNDIwLjU2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+            </p>
+            <h1>Make the most of your professional life.</h1>
+        </div>
+        <div class="form">
+           <div class="name-cont">
+            <label for="name" style="display: block;">First name</label>
+            <input type="text" name="name" id="name">
+           </div>
+           <div class="name-cont">
+            <label for="name" style="display: block;">Last name</label>
+            <input type="text" id="name">
+           </div>
+           <div class="email">
+               <label for="email">Email</label>
+               <input type="email" name="email" id="email">
+           </div>
+           <div class="password">
+               <label for="password" style="display: block;">Password(6 or more characters)</label>
+               <input type="password" id="password" name="password">
+           </div>
+           <div class="agree">
+               <p>You agree with Linkedin <a href="#" style="text-decoration: none; color: black;">User agreement</a> , <a href="#" style="text-decoration: none; color: black;">privacy policy</a> and <br><a href="#" style="text-decoration: none; color: black;">cookie policy.</a></p>
+           </div>
+           <div class="login">
+               <button name="login" value="join">Agree & join</button>
+           </div>
+           <p style="text-align: center;">Or</p>
+           <p style="text-align: center; font-size: 20px;">Already on Linkedin? <a href="#" style="text-decoration: none; color: #23639a ">Sign in</a></p>
+        </div>
+        <p style="text-align: center; color: white; font-size: 18px;">Created with love by Mit rao&copy;(With inspiration of Azeez brother)</p>
+    </div>
+    </body>
+</html>
+
+
+
